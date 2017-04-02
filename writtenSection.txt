@@ -1,29 +1,29 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
-
+  It means that the HTML is written with specific names for elements. This helps you keep your code organized and more understandable to those reading it.
 2. What is the box model?
-
+  All elements in HTML are "boxes". They all have margin on the outer layer, border inside of that, padding next, and finally the actual content. The box model helps the designer/coder orient each element on the page. The span element doesn't have a top or bottom margin, so you have to remember that when you are writing your code.
 3. What is the difference between IDs and Classes?
-
+  ID's are specifically used when you are only styling one element, and classes are less specific and used when you might want to re-use the class; meaning that classes can be used on multiple elements.
 4. What does the z-index do?
-
+  There are three main indexes. The y-index is vertical, the x-index is horizontal, and the z-index is front to back for the way elements are displayed on the page, meaning that an element with a higher z-index will be granted space over elements with a lower z-index. Many developers will make the nav-bar have the highest index, so that nothing will overlap it on the screen.
 5. Summarize what the keyword 'this' is used for?
-
+  The keyword 'this' is used when you need to define the context of the function within which it is used.
 6. What is a callback?
-
+  A callback function is a function that is passed into another function as an argument.
 7. What is a closure?
-
+  Closure is what happens when one function returns another function. An inner function takes a picture or a snapshot of the contents and scope of the outer function, and the outer function is cleared.
 8. How does prototype work?
-
+  Every object in JS inherit properties and methods from the prototype. Prototype is generally used with function that start with capital letters.
 9. What is MVC?
-
+  MVC stands for Model View Controller. It is a way to organize the structure of front-end design. The model stores all of the information that needs to be used, the view is what is rendered to the screen, and the controller accepts info from inputs and converts it into commands for the model or the view.
 10. What is the component lifecycle?
-
+  The lifecycle determines when certain hooks take place, and it will vary from one framework to another.
 11. What is REST?
-
+  REST is representational state transfer, which is a structured set of rules that set a standard for communicating with APIs.
 12. Name three ways of getting data from the URL using express
-
+  You can use req.params, req.body, or req.query to get data from the URL.
 create table users (
 id serial,
 name varchar(255),
@@ -33,9 +33,20 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
+SELECT * FROM users
 
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
+INSERT INTO users
+(name, email)
+VALUES
+(Brian, email@email.com)
 
 -Update the newly created user's name to 'Bobby Boy':
 
+UPDATE users
+SET name = 'Bobby Boy'
+WHERE email = 'email@email.com'
+
 -Delete the newly updated user:
+DELETE FROM users
+WHERE name = 'Bobby Boy'
